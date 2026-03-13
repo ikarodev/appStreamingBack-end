@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description"
+    content="Experience endless entertainment with yourappname, your ultimate OTT platform for streaming movies, TV shows, kids' content, and more. Watch premium content, rent the latest releases, and enjoy exclusive access to your favorite titles. Discover a world of entertainment tailored to your tastes, available anytime, anywhere.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="yourappname">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <title>yourappname</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    var serviceWorkerVersion = '{{flutter_service_worker_version}}';
+  </script>
+  <!-- ... -->
+  <script type="application/javascript" src="/assets/packages/flutter_inappwebview_web/assets/web/web_support.js"
+    defer></script>
+  <!-- ... -->
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+
+  <!-- iOS Apple login -->
+  <script type="text/javascript"
+    src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+
+  <!-- Google login -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <meta name="google-signin-client_id" content="1065762459264-95qe1152pqgcgpidk002072vqci8fgi8.apps.googleusercontent.com">
+
+  <!-- Razorpay -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <!-- Open new Tab -->
+  <script src="script.js" type="application/javascript"></script>
+
+  <!-- Stripe PG -->
+  <script src="https://js.stripe.com/v3/"></script>
+
+  <!-- Firebase reCAPTCHA for Phone Auth -->
+  <div id="recaptcha-container" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); display: none;">
+    <div style="text-align: center; margin-bottom: 15px; color: #333; font-family: Arial, sans-serif;">
+      <h3 style="margin: 0 0 10px 0;">Verificação de Segurança</h3>
+      <p style="margin: 0; font-size: 14px;">Complete a verificação para enviar o SMS</p>
+    </div>
+  </div>
+
+  <style>
+    .container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+    }
+
+    .indicator {
+      width: 50vw;
+    }
+  </style>
+</head>
+
+<body style="overflow: hidden">
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+  <div id="loading_indicator" class="container">
+    <img class="indicator" src="./assets/splash_web.png" />
+  </div>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
+    import { getMessaging } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-messaging.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration - deve coincidir com firebase_options.dart
+    const firebaseConfig = {
+      apiKey: 'AIzaSyAFynOb7cl555DkSCO0I4C51nEFGAEqpgc',
+      appId: '1:1065762459264:web:3cb60f2efd86c03733e065',
+      messagingSenderId: '1065762459264',
+      projectId: 'dt-live-web',
+      authDomain: 'dt-live-web.firebaseapp.com',
+      storageBucket: 'dt-live-web.firebasestorage.app',
+      measurementId: 'G-BR9BQYS8H1',
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest" type="application/javascript"></script>
+
+  <script src="flutter_bootstrap.js" async>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function (ev) {
+        // Download main.dart.js
+        _flutter.loader.load({
+          serviceWorker: {
+            serviceWorkerVersion: serviceWorkerVersion,
+          },
+          onEntrypointLoaded: function (engineInitializer) {
+            engineInitializer.initializeEngine().then(function (appRunner) {
+              appRunner.runApp();
+            });
+          }
+        });
+
+        // Register Firebase Messaging service worker.
+        navigator.serviceWorker.register('firebase-messaging-sw.js', {
+          scope: '/firebase-cloud-messaging-push-scope',
+        });
+
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+      });
+    }
+  </script>
+  <script src="main.dart.js" type="application/javascript"></script>
+  <script type="text/javascript">window.flutterWebRenderer = "html";</script>
+
+</body>
+
+</html>

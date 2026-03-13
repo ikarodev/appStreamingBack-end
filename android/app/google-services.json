@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1065762459264",
+    "project_id": "dt-live-web",
+    "storage_bucket": "dt-live-web.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065762459264:android:142247becdda683833e065",
+        "android_client_info": {
+          "package_name": "com.example.yourappname"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065762459264-95qe1152pqgcgpidk002072vqci8fgi8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNWWf7Pl72z_RgaaKBegVRD5_gLKC8I-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065762459264-5id4atdmhu6o732sq32u7ji6chhkhqek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

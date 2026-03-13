@@ -1,0 +1,171 @@
+name: handsplay
+description: A new Flutter project.
+publish_to: "none"
+version: 1.7.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  chewie:
+    path: packages/chewie/
+  vimeo_video_player:
+    path: packages/vimeo/
+
+  # UI & Layout
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.1.0
+  youtube_player_iframe: ^4.0.4
+  pointer_interceptor: ^0.9.3+4
+  video_player: ^2.8.2
+  video_player_web: ^2.1.3
+  video_player_media_kit: ^1.0.5
+  webview_flutter: ^4.5.0
+  webview_flutter_android: ^3.15.0
+  webview_flutter_wkwebview: ^3.12.0
+  url_launcher: ^6.2.4
+  carousel_slider: ^4.2.1
+  shimmer: ^3.0.0
+  toggle_switch: ^2.1.0
+  awesome_dialog: ^3.2.0
+  pull_to_refresh: ^2.0.0
+  responsive_framework: ^1.1.1
+  path_provider: ^2.1.2
+  flutter_screenutil: ^5.9.0
+  path: 1.9.0
+  device_info_plus: ^9.1.2
+  package_info_plus: ^5.0.1
+  image_picker: ^1.0.7
+  intl: 0.20.2
+  cached_network_image: ^3.3.1
+  dio: ^5.4.0
+  flutter_svg: ^2.0.9
+  flutter_secure_storage: ^9.0.0
+  connectivity_plus: ^5.0.2
+  provider: ^6.1.1
+  fluttertoast: ^8.2.4
+  screen_capture_event: ^1.1.1
+  shared_preferences: ^2.2.2
+  font_awesome_flutter: ^10.6.0
+  dotted_border: ^2.1.0
+  share_plus: ^7.2.1
+  html: ^0.15.4
+  flutter_widget_from_html: ^0.14.11
+  http: ^1.2.0
+  file_picker: ^6.1.1
+  flutter_inappwebview: ^5.8.0
+  flutter_rating_bar: ^4.0.1
+  get_it: ^7.6.7
+  firebase_core: ^2.25.4
+  firebase_auth: ^4.17.4
+  firebase_messaging: ^14.7.16
+  flutter_local_notifications: ^16.3.2
+  onesignal_flutter: ^5.0.4
+  go_router: ^13.2.0
+  open_store_redirect: ^1.3.1
+
+  # Localização com easy_localization
+  easy_localization: ^3.0.3
+  
+  # Dependência que exige intl 0.20.2
+  # flutter_locales foi removido completamente para evitar conflitos
+  # Se precisar de localização, use apenas easy_localization
+
+  # Payments
+  in_app_purchase: ^3.1.11
+  in_app_purchase_android: ^0.3.0+15
+  in_app_purchase_storekit: ^0.3.7+1
+  flutter_stripe: ^10.1.0
+  flutter_stripe_web: ^5.1.0
+  flutter_paypal: ^0.2.0
+  razorpay_flutter: ^1.3.5
+  paytm_allinonesdk: ^1.2.2
+  flutterwave_standard: ^1.0.8
+  pay: ^1.1.2
+
+  # Ads
+  google_mobile_ads: ^4.0.0
+  facebook_audience_network: ^1.0.1
+
+  # Media
+  just_audio: ^0.9.36
+  interactive_media_ads: ^0.2.4
+  flutter_subtitle: ^0.0.6
+  wakelock_plus: ^1.1.4
+  chewie_audio: ^1.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  rename: ^3.0.1
+  build_runner: ^2.4.11
+  flutter_launcher_icons: ^0.13.1
+  url_strategy: ^0.2.0
+  video_thumbnail: ^0.5.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+    - assets/firebase/
+    - assets/locales/
+    - assets/appicon/
+    - assets/images/ic_commentlike.png
+    - assets/images/ic_genresbanner.png
+    - assets/images/ic_series.png
+    - assets/images/ic_more_details.png
+    - assets/images/ic_download_list.png
+    - assets/images/ic_cmingsoon.png
+    - assets/images/ic_facebook.png
+    - assets/images/ic_twitter.png
+    - assets/images/ic_instagram.png
+    - assets/images/ic_youtube.png
+    - assets/images/ic_live.png
+    - assets/images/ic_naturalaudio.png
+    - assets/images/ic_dolbyaudio.png
+    - assets/images/ic_subtitles.png
+    - assets/images/ic_devices.png
+    - assets/images/ic_relate_icon.png
+    - assets/images/ic_no_download.png
+    - assets/images/ic_comments.png
+    - assets/images/ic_audio.png
+    - assets/images/ic_chromecast.png
+    - assets/images/ic_nodata.png
+    - assets/images/ic_nointernet.png
+    - assets/images/ic_tvguide.png
+    - assets/images/ic_buzzing_web.png
+    - assets/images/ic_buzzing.png
+    - assets/images/ic_nodata_banner.jpg
+    - assets/images/ic_nomessage.png
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+    
+  # Para seu fvm flutter pub
+  # Esta configuração é usada apenas para flutter_launcher_icons
+  # Se usar isto, descomente o bloco abaixo e adicione a configuração necessária
+  
+  # flutter_icons:
+  #   android: true
+  #   ios: true
+  #   image_path: "assets/appicon/appicon.png"

@@ -1,0 +1,27 @@
+{
+  "stripe_plans": {
+    "dedinho": {
+      "name": "Plano Dedinho",
+      "price_id": "price_1SBOuPJZw4jL9eB4ggij57dR",
+      "description": "Plano básico"
+    },
+    "dedo": {
+      "name": "Plano Dedo", 
+      "price_id": "price_1SBOu5JZw4jL9eB4wMhPmPqF",
+      "description": "Plano intermediário"
+    },
+    "dedao": {
+      "name": "Plano Dedão",
+      "price_id": "price_1SBOtfJZw4jL9eB4HceKJ59g", 
+      "description": "Plano premium"
+    }
+  },
+  "stripe_config": {
+    "publishable_key": "pk_live_51O8YtMJZw4jL9eB4qqydPMqbnx5wToUKoHHmYMaAr8gkobh5jpXrLmgpKwwr1eamHVIRXnNO2y7kvlODG6UAzqT900hG2Y8jCO",
+    "secret_key": "",
+    "webhook_secret": "whsec_CIBwa5m815m5m2H4AX5AsOjQmceVvCES",
+    "webhook_url": "https://app.handsplay.com.br/stripe/webhook",
+    "success_url": "https://app.handsplay.com.br/#/success",
+    "cancel_url": "https://app.handsplay.com.br/#/cancel"
+  }
+}
